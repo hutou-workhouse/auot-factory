@@ -1,0 +1,22 @@
+globalSetting: 
+  # 需要配置的系统数据
+  systemData: 
+    basePath: d:/test
+
+  # 需要配置全局自定义信息
+  systemDefine: 
+    userDefine1: jdiejis
+    userDefine2: jijijdsi4h
+
+  # 需要配置的插件信息
+  plugins: 
+    - {
+      name: plugins-name-demo, 
+      # 实现 me.helllp.tools.afactory.core.FactoryPlugin 接口
+      pluginClass: me.helllp.tools.afactory.plugins.demo.DemoFactoryPlugin,
+      # 继承 me.helllp.tools.afactory.core.BasePluginBean 类
+      beanClass: me.helllp.tools.afactory.plugins.demo.DemoPluginBean,
+      resourcePath: auto-config/pluginPom.yml,
+      autoWrite: true,
+      description: 这是一个pom插件
+    }    

@@ -1,0 +1,27 @@
+# 这是插件的具体配置模块，在模板中使用的名字：local
+# 用户可以自由定义需要的属性，只在本模块中有效
+userDefines: 
+  basePackagePath: me/helllp/plugin/demo1
+  groupId: me.group.plugin
+  artifactId: demo1
+fileInfos: 
+  - 
+    fileName: pom.xml
+    pathName: ${system.systemData.basePath}/common/
+    template: common/pom.ftl
+  - 
+    fileName: BaseParams.java
+    pathName: ${system.systemData.basePath}/common/src/main/java/${local.userDefines.basePackagePath}/base/
+    template: common/BaseParams.ftl  
+  - 
+    fileName: Result.java
+    pathName: ${system.systemData.basePath}/common/src/main/java/${local.userDefines.basePackagePath}/base/
+    template: common/Result.ftl  
+  - 
+    fileName: ResultCode.java
+    pathName: ${system.systemData.basePath}/common/src/main/java/${local.userDefines.basePackagePath}/base/
+    template: common/ResultCode.ftl                     
+
+#### 下面的内容可以自行定义，如果有比较复杂的数据，需要自定义对应的Bean
+params: 
+  - {name: tenantId, type: String, description: 这是一个租户ID}
